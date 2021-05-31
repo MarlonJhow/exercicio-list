@@ -34,6 +34,14 @@ public class NotaService {
         return null;
     }
 
+    /**
+     * Deve retornar uma lista de String contendo as descricoes unicas(Sem repetir)
+     */
+    public List<String> listaDescricoesUnicas(List<Nota> notas) {
+
+        return null;
+    }
+
 
 
 }

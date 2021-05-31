@@ -36,7 +36,7 @@ class NotaServiceTest {
         nota3.setValor(30.00);
         List<Nota> notas = Arrays.asList(nota1, nota2, nota3);
 
-        Integer quantidade = notaService.quantidadeDeNotas(notas);
+        int quantidade = notaService.quantidadeDeNotas(notas);
 
         assertEquals(3, quantidade);
     }
@@ -77,6 +77,25 @@ class NotaServiceTest {
         assertEquals(3,notaResultado.size());
         List<Nota> notasErradas = notaResultado.stream().filter(nota -> nota.getValor() > 50.00).collect(Collectors.toList());
         assertTrue(notasErradas.isEmpty());
+    }
+
+    @Test
+    void descricoesUnicas() {
+        Nota nota1 = new Nota();
+        Nota nota2 = new Nota();
+        Nota nota3 = new Nota();
+        Nota nota4 = new Nota();
+        Nota nota5 = new Nota();
+        nota1.setDescricao("batata");
+        nota2.setDescricao("peixe");
+        nota3.setDescricao("mandioca");
+        nota4.setDescricao("peixe");
+        nota5.setDescricao("batata");
+        List<Nota> notas = Arrays.asList(nota1, nota2, nota3);
+
+        List<String> notaResultado = notaService.listaDescricoesUnicas(notas);
+
+        assertEquals(3,notaResultado.size());
     }
 
 
