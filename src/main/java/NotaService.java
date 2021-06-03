@@ -45,7 +45,7 @@ public class NotaService {
 
 
     /**
-     * Somar valor de todas as notas que começam com a descricao B (maisculo ou minusculo), entretanto não somar caso iniciei com BR(maisculo ou minusculo)
+     * Somar valor de todas as notas que começam com a letra B na descricao, entretanto não somar quando iniciei com BR(maisculo ou minusculo)
      */
     public Double somarInicioComBmasNaoIniciaComBR(List<Nota> notas) {
 
