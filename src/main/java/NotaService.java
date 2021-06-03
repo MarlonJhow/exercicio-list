@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Map;
 
 public class NotaService {
 
@@ -43,5 +44,43 @@ public class NotaService {
     }
 
 
+    /**
+     * Somar valor de todas as notas que começam com a descricao B (maisculo ou minusculo), entretanto não somar caso iniciei com BR(maisculo ou minusculo)
+     */
+    public Double somarInicioComBmasNaoIniciaComBR(List<Nota> notas) {
 
+        return null;
+    }
+
+    /**
+     * Transformar a List de Notas em um Map onde a chave é o Id e o valor é a Nota
+     */
+    public Map<Long,Nota> transformarEmMap(List<Nota> notas) {
+    return null;
+    }
+
+    /**
+     * Retornar uma lista contendo todas as chaves do map
+     */
+    public List<Long> retornarListaDeChaves(Map<Long,Nota> map) {
+
+        return null;
+    }
+
+    /**
+     * Retornar uma lista contendo todos os valores do map
+     */
+    public List<Nota> retornarListaDeValores(Map<Long, Nota> map) {
+
+        return null;
+    }
+
+    /**
+     * Verificar quantas vezes a descricao se repete
+     * Deve retornar um Map onde a chave é a descrição e o valor é a quantidade de vezes que a descricao se repetiu na lista
+     */
+    public Map<String, Integer> mapComQuantasVezesADescricaoSeRepete(List<Nota> notas) {
+
+        return null;
+    }
 }
