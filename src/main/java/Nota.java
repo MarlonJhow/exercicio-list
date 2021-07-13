@@ -3,6 +3,7 @@ public class Nota {
     private Long id;
     private String descricao;
     private Double valor;
+    private Boolean vencida = false;
 
     public Long getId() {
         return id;
@@ -26,5 +27,9 @@ public class Nota {
 
     public void setValor(Double valor) {
         this.valor = valor;
+    }
+
+    public Boolean getVencida() {
+        return vencida;
     }
 }

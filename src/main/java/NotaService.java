@@ -83,4 +83,12 @@ public class NotaService {
 
         return null;
     }
+
+    /**
+     * Retornar uma nota onde o campo vencida retorne true sem alterar a classe Nota
+     * Obs: Criar uma classe filha de nota
+     */
+    public Nota retornarNotaVencidaTrue() {
+        return null;
+    }
 }

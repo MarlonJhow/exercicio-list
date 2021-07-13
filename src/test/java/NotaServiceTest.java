@@ -238,4 +238,12 @@ class NotaServiceTest {
         assertEquals(1, resultado.get("ovo"));
     }
 
+    @Test
+    void retornarVencidaNotaTrue() {
+
+        Nota nota = notaService.retornarNotaVencidaTrue();
+
+        assertTrue(nota.getVencida());
+    }
+
 }
