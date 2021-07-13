@@ -239,6 +239,49 @@ class NotaServiceTest {
     }
 
     @Test
+    void converterListParaSet() {
+        Nota nota1 = new Nota();
+        Nota nota2 = new Nota();
+        Nota nota3 = new Nota();
+        nota1.setDescricao("peixe");
+        nota2.setDescricao("batata");
+        nota3.setDescricao("ovo");
+
+        List<Nota> notas = Arrays.asList(nota1, nota2, nota3);
+        Set<Nota> resultado = notaService.converterListParaSet(notas);
+
+        assertTrue(resultado.contains(nota1));
+        assertTrue(resultado.contains(nota2));
+        assertTrue(resultado.contains(nota3));
+    }
+
+    @Test
+    void converterSetParaListEOrdenarPorId() {
+        Nota nota1 = new Nota();
+        Nota nota2 = new Nota();
+        Nota nota3 = new Nota();
+        Nota nota4 = new Nota();
+        Nota nota5 = new Nota();
+        Nota nota6 = new Nota();
+        nota1.setId(3L);
+        nota2.setId(10L);
+        nota3.setId(12L);
+        nota4.setId(1L);
+        nota5.setId(7L);
+        nota6.setId(9L);
+
+        HashSet<Nota> notas = new HashSet<>(Arrays.asList(nota1, nota2, nota3, nota4, nota5, nota6));
+        List<Nota> resultado = notaService.converterSetParaListEOrdenarPorId(notas);
+
+        assertEquals(nota4, resultado.get(0));
+        assertEquals(nota1, resultado.get(1));
+        assertEquals(nota5, resultado.get(2));
+        assertEquals(nota6, resultado.get(3));
+        assertEquals(nota2, resultado.get(4));
+        assertEquals(nota3, resultado.get(5));
+    }
+
+    @Test
     void retornarVencidaNotaTrue() {
 
         Nota nota = notaService.retornarNotaVencidaTrue();

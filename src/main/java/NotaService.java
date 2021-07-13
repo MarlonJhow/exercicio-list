@@ -1,5 +1,7 @@
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class NotaService {
 
@@ -80,6 +82,22 @@ public class NotaService {
      * Deve retornar um Map onde a chave é a descrição e o valor é a quantidade de vezes que a descricao se repetiu na lista
      */
     public Map<String, Integer> mapComQuantasVezesADescricaoSeRepete(List<Nota> notas) {
+
+        return null;
+    }
+
+    /**
+     * Converter List de Notas para Set de Notas
+     */
+    public Set<Nota> converterListParaSet(List<Nota> notas) {
+
+        return null;
+    }
+
+    /**
+     * Converter Set de Notas para List de Notas e order por id
+     */
+    public List<Nota> converterSetParaListEOrdenarPorId(Set<Nota> notas) {
 
         return null;
     }
